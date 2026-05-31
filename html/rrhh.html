@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Control RRHH - Seguridad LTDA</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="navbar">
+        <h1>Módulo de Gestión de Recursos Humanos</h1>
+        <a href="index.html">Cerrar Sesión</a>
+    </div>
+
+    <div class="container">
+        <!-- Contenedor izquierdo para los formularios -->
+        <div class="card">
+            
+            <h3>Registrar Ficha Personal</h3>
+            <form id="formFicha">
+                <label for="empRut">RUT:</label>
+                <input type="text" id="empRut" placeholder="12345678-9" required>
+
+                <label for="empNombre">Nombre Completo:</label>
+                <input type="text" id="empNombre" required>
+
+                <label for="empCargo">Cargo Laboral:</label>
+                <input type="text" id="empCargo" required>
+
+                <label for="empPrevision">Previsión Social:</label>
+                <select id="empPrevision">
+                    <option value="afp">AFP + Fonasa</option>
+                    <option value="isapre">AFP + Isapre</option>
+                </select>
+
+                <label for="empSueldo">Sueldo Base ($):</label>
+                <input type="number" id="empSueldo" value="500000" required>
+
+                <button type="button" onclick="registrarFichaEmpleado()">Guardar Ficha</button>
+            </form>
+        </div>
+
+       
+    </div>
+
+    
+    <script src="../js/database.js"></script>
+    <script src="../js/databaseJ.js"></script>
+</body>
+</html>

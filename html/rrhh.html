@@ -38,6 +38,20 @@
 
                 <button type="button" onclick="registrarFichaEmpleado()">Guardar Ficha</button>
             </form>
+            <h3>Marcación de Asistencia</h3>
+            <form id="formAsistencia">
+                <label for="asistRut">Seleccionar Empleado:</label>
+                <select id="asistRut"></select>
+                <label for="asistFecha">Fecha:</label>
+                <input type="date" id="asistFecha" required>
+                <label for="asistEstado">Estado Jornada:</label>
+                <select id="asistEstado">
+                    <option value="Asiste">Asistencia Completa</option>
+                    <option value="Atraso">Atraso</option>
+                    <option value="Ausente">Ausencia Injustificada</option>
+                </select>
+                <button type="button" onclick="registrarAsistencia()" class="btn-warning">Guardar Marcación</button>
+            </form>
         </div>
 
          <!-- Contenedor derecho para el listado de empleados -->

@@ -31,6 +31,25 @@
                 
                 <button type="button" onclick="crearProductoBodega()">Dar de Alta Producto</button>
             </form>
+            
+            <hr style="margin: 25px 0; border: 0; border-top: 1px solid #eee;">
+            <h3>Registrar Movimiento de Mercadería (HU-11)</h3>
+            <form id="formMovimiento">
+                <label for="movProd">Seleccionar Código de Artículo:</label>
+                <!-- En esta fase el usuario debe tipear el código, en la Fase 3 lo automatizaremos -->
+                <input type="text" id="movProd" placeholder="Ej: SKU-LIN-01" required>
+                
+                <label for="movTipo">Tipo de Transacción:</label>
+                <select id="movTipo">
+                    <option value="Entrada">Entrada (Abastecimiento)</option>
+                    <option value="Salida">Salida (Despacho a sucursal)</option>
+                </select>
+                
+                <label for="movCantidad">Cantidad:</label>
+                <input type="number" id="movCantidad" value="1" required>
+                
+                <button type="button" onclick="ejecutarMovimientoBodega()" class="btn-warning">Procesar Tránsito</button>
+            </form>
         </div>
     </div>
 
